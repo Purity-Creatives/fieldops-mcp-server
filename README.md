@@ -1,17 +1,17 @@
 # FieldOps MCP Server
-### Last-Mile Delivery + Asset Finance Collections — Africa Fintech
+### Last-Mile Delivery + Asset Finance Collections - Africa Fintech
 
 **Author:** Purity Wanjiru | [github.com/Purity-Creatives](https://github.com/Purity-Creatives)  
-**Protocol:** [Model Context Protocol (MCP)](https://modelcontextprotocol.io) — Anthropic  
+**Protocol:** [Model Context Protocol (MCP)](https://modelcontextprotocol.io) - Anthropic  
 **Stack:** Python, MCP SDK  
 **Market:** Kenya · Uganda · Nigeria · Ghana · Tanzania  
-**Status:** v0.1.0 — active development  
+**Status:** v0.1.0 - active development  
 
 ---
 
 ## What This Is
 
-A Model Context Protocol server that gives Claude conversational access to last-mile delivery tracking and asset finance collections data — built for the operational reality of pay-as-you-go device financing across Africa.
+A Model Context Protocol server that gives Claude conversational access to last-mile delivery tracking and asset finance collections data - built for the operational reality of pay-as-you-go device financing across Africa.
 
 The model: a customer orders a solar panel, smartphone, or appliance. A field agent delivers it. The customer repays in daily or weekly instalments via mobile money. If they stop paying, the device gets remotely locked.
 
@@ -27,7 +27,7 @@ This MCP server lets operations teams ask Claude natural language questions abou
 → Lists 7 failed deliveries with customer IDs, agents, failure reasons, and action needed
 
 "Which agents have the lowest delivery success rate this week?"
-→ Ranks all agents — worst performers flagged for coaching
+→ Ranks all agents - worst performers flagged for coaching
 
 "How many devices are still in transit across Uganda?"
 → Returns count, agent assignments, and days in transit per order
@@ -48,13 +48,13 @@ This MCP server lets operations teams ask Claude natural language questions abou
 **Combined field ops:**
 ```
 "Show me the full journey for customer C-00045"
-→ Order date → delivery status → repayment history → risk flag — all in one response
+→ Order date → delivery status → repayment history → risk flag - all in one response
 
 "How many delivered devices have made zero repayments after 14 days?"
-→ Early default detection — highest-risk segment identified immediately
+→ Early default detection - highest-risk segment identified immediately
 
 "Which regions have strong delivery but weak collections?"
-→ Regional scorecard comparing both metrics — surface where to focus
+→ Regional scorecard comparing both metrics - surface where to focus
 ```
 
 ---
@@ -74,7 +74,7 @@ This MCP server lets operations teams ask Claude natural language questions abou
 
 | Tool | Description |
 |------|-------------|
-| `get_collections_summary` | Portfolio overview — outstanding balance, repayment rate, DPD buckets |
+| `get_collections_summary` | Portfolio overview - outstanding balance, repayment rate, DPD buckets |
 | `get_overdue_accounts` | Accounts by DPD bucket (1-30, 31-60, 61-90, 90+) |
 | `get_device_lock_candidates` | Devices eligible for remote lock (61+ DPD, not yet locked) |
 | `get_agent_collections_performance` | Agent leaderboard by repayment recovery rate |
@@ -84,8 +84,8 @@ This MCP server lets operations teams ask Claude natural language questions abou
 | Tool | Description |
 |------|-------------|
 | `get_customer_journey` | Full delivery + collections history for one customer |
-| `get_zero_repayment_report` | Delivered devices with <10% repayment after N days — early default detection |
-| `get_regional_performance` | Delivery success vs collections rate side by side — all regions |
+| `get_zero_repayment_report` | Delivered devices with <10% repayment after N days - early default detection |
+| `get_regional_performance` | Delivery success vs collections rate side by side - all regions |
 
 ---
 
@@ -168,9 +168,9 @@ def _load_customers():
 
 This MCP server is the foundation for a commercial **Field Ops AI layer** that any African asset finance or last-mile logistics company can plug Claude into:
 
-- **SaaS API** — expose as a hosted MCP endpoint, charge per seat
-- **White-label** — deploy under client branding for enterprise contracts
-- **Vertical expansion** — extend to insurance, microfinance, agri-input distribution
+- **SaaS API** - expose as a hosted MCP endpoint, charge per seat
+- **White-label** - deploy under client branding for enterprise contracts
+- **Vertical expansion** - extend to insurance, microfinance, agri-input distribution
 
 Target customers: M-KOPA, d.light, PAYG distributors, solar home system companies, motorcycle finance lenders, last-mile logistics operators.
 
@@ -178,8 +178,8 @@ Target customers: M-KOPA, d.light, PAYG distributors, solar home system companie
 
 ## Related Projects
 
-- [IFRS 9 ECL Model — Kenya Asset Finance](https://github.com/Purity-Creatives/ifrs9-ecl-model-kenya) — Credit risk modelling for asset finance portfolios (AUC-ROC: 0.860)
-- [FMCG Demand Forecasting — Kenya](https://github.com/Purity-Creatives/fmcg-demand-forecasting-kenya) — Prophet forecasting (96.4% accuracy), promotion ROI analysis
+- [IFRS 9 ECL Model - Kenya Asset Finance](https://github.com/Purity-Creatives/ifrs9-ecl-model-kenya) - Credit risk modelling for asset finance portfolios (AUC-ROC: 0.860)
+- [FMCG Demand Forecasting - Kenya](https://github.com/Purity-Creatives/fmcg-demand-forecasting-kenya) - Prophet forecasting (96.4% accuracy), promotion ROI analysis
 
 ---
 
